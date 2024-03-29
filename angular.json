@@ -7,6 +7,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "personal-curiosities-angular-localize": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "fa":"src/local/messages.fa.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,6 +29,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":["fa"],
             "outputPath": "dist/personal-curiosities-angular-localize",
             "index": "src/index.html",
             "main": "src/main.ts",
